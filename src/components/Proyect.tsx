@@ -8,7 +8,7 @@ const Proyect = () => {
     <div>
       <h1 className="text-3xl my-8">My Proyects</h1>
       <div className="flex justify-center gap-10 items-center flex-wrap overflow-y-auto">
-        {projects?.map((project, index) => (
+        {projects?.map((project: any, index: string) => (
           <div
             key={index}
             className="w-96  rounded-lg border-2 text-gray-200 shadow-md bg-gray-800 border-gray-700"
