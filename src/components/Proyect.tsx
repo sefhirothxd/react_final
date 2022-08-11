@@ -7,7 +7,7 @@ const Proyect = () => {
   return (
     <div>
       <h1 className="text-3xl my-8">My Proyects</h1>
-      <div className="flex justify-center gap-10 items-center flex-wrap overflow-y-auto">
+      <div className="flex justify-center gap-10 items-center flex-wrap altoProyecto overflow-y-auto pb-5">
         {projects?.map((project: any, index: string) => (
           <div
             key={index}

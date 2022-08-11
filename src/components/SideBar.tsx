@@ -1,22 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Dashboard from '../assets/dashboard.svg';
 import Skill from '../assets/skill.svg';
 import Refe from '../assets/refe.svg';
 import Twitter from '../assets/twitter.svg';
 import GitHub from '../assets/github.svg';
 import Linkedin from '../assets/link.svg';
-import { ProfileContext } from '../context/UseProfileProvider';
 
 const SideBar = () => {
-  const { showMenu, setBar } = useContext(ProfileContext);
   return (
-    <div
-      className={`border-r-2 w-full max-w-xs ${
-        showMenu ? 'translate-x-0' : '-translate-x-80'
-      } block  border-white h-full bg-slate-700 z-10 max-h-screen py-11 fixed`}
-    >
+    <div className=" border-r-2 w-full max-w-xs hidden lg:block border-white  bg-slate-700 z-10 max-h-screen py-11 relative">
       <div className="flex items-center justify-center gap-4 mb-24">
-        <button onClick={setBar}>X</button>
         <h1 className="text-3xl font-medium">LarnU</h1>
         <p className="text-xl italic text-blueTitle">BootCamp</p>
       </div>
@@ -41,16 +34,16 @@ const SideBar = () => {
             </div>
           </li>
         </ul>
-        <div className="absolute bottom-10 left-1/2">
-          <h3>Follow us:</h3>
-          <div className="flex justify-between items-center">
-            <a href="https://twitter.com/bveracachay">
+        <div className="absolute bottom-10 leftSocial text-center">
+          <h3 className="mb-5">Follow us:</h3>
+          <div className="flex justify-between gap-10 items-center">
+            <a href="https://twitter.com/bveracachay" target={'_blank'}>
               <img className="w-5" src={Twitter} alt="twitter icon" />
             </a>
-            <a href="https://github.com/sefhirothxd">
+            <a href="https://github.com/sefhirothxd" target={'_blank'}>
               <img src={GitHub} alt="github icon" />
             </a>
-            <a href="https://www.linkedin.com/in/bryanvera/">
+            <a href="https://www.linkedin.com/in/bryanvera/" target={'_blank'}>
               <img src={Linkedin} alt="linkedin icon" />
             </a>
           </div>

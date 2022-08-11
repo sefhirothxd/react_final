@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 .altoProyecto {
-  height: 30vh;
+  height: calc(100vh - 509px);
+}
+.leftSocial {
+  left: 90px;
 }
