@@ -11,7 +11,9 @@
 .probando {
   min-width: 320px;
 }
-
+.active {
+  color: #1d96ff;
+}
 @media screen and (max-width: 1279px) {
   .altoProyecto {
     height: calc(100vh - 450px);

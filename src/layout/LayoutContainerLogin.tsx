@@ -8,7 +8,7 @@ const LayoutContainerLogin = () => {
     return <Navigate to="/" />;
   }
   return (
-    <div className="flex w-full justify-center items-center">
+    <div className="flex w-full  items-center">
       <SideBar />
       <Outlet />
     </div>

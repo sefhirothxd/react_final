@@ -5,6 +5,7 @@ import Refe from '../assets/refe.svg';
 import Twitter from '../assets/twitter.svg';
 import GitHub from '../assets/github.svg';
 import Linkedin from '../assets/link.svg';
+import { NavLink } from 'react-router-dom';
 
 const SideBar = () => {
   return (
@@ -16,21 +17,21 @@ const SideBar = () => {
       <div className=" ">
         <ul className="flex items-center justify-center  gap-11 flex-col">
           <li className="mx-auto w-40">
-            <div className="flex gap-4">
+            <NavLink to={'/'} className="flex gap-4 ">
               <img src={Dashboard} alt="icon dashboard" />
-              <p className="text-xl text-blueTitle">Dashboard</p>
-            </div>
+              <p className="text-xl ">Dashboard</p>
+            </NavLink>
           </li>
           <li className="mx-auto w-40">
-            <div className="flex gap-4">
+            <NavLink to={'/login'} className="flex gap-4">
               <img src={Skill} alt="icon dashboard" />
-              <p className="text-xl text-gray-200">My Skills</p>
-            </div>
+              <p className="text-xl ">My Skills</p>
+            </NavLink>
           </li>
           <li className="mx-auto w-40">
             <div className="flex gap-4">
               <img src={Refe} alt="icon dashboard" />
-              <p className="text-xl text-gray-200">References</p>
+              <p className="text-xl ">References</p>
             </div>
           </li>
         </ul>
