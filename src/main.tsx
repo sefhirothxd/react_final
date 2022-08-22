@@ -9,7 +9,7 @@ import 'flowbite';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <UseProfileProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/react_final">
         <App />
       </BrowserRouter>
     </UseProfileProvider>
