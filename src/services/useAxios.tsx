@@ -13,18 +13,13 @@ type Profile = {
   };
 };
 
-type GetProfile = {
-  data: {
-    projects: [];
-  };
-};
 export const useAxios = () => {
   const [error, setError] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const fetchData = async (params: Profile) => {
     try {
-      const result = await axios.request<GetProfile>(params);
+      const result = await axios.request(params);
       if (result.status === 200) {
         console.log(result);
         console.log(loading);

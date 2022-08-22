@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import SideBar from '../components/SideBar';
 import { ProfileContext } from '../context/UseProfileProvider';
 import { Navigate, Outlet } from 'react-router-dom';
 const LayoutContainerLogin = () => {
@@ -7,7 +8,8 @@ const LayoutContainerLogin = () => {
     return <Navigate to="/" />;
   }
   return (
-    <div>
+    <div className="flex w-full justify-center items-center">
+      <SideBar />
       <Outlet />
     </div>
   );

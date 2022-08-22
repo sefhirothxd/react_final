@@ -1,24 +1,21 @@
 import React, { useState, createContext, useEffect, ReactNode } from 'react';
 import { useAxios } from '../services/useAxios.jsx';
-import Login from '../pages/Login';
-import Proyect from '../components/Proyect';
+
+interface ProfileContextInterface {
+  login: boolean;
+  showMenu: boolean;
+  proyectos: [];
+  setBar: () => void;
+}
+
 export const ProfileContext = createContext({
   login: false,
   showMenu: false,
-  proyectos: [''],
+  proyectos: [],
   setBar: () => {},
-});
+} as ProfileContextInterface);
 
 const token = 'o6xsHB5Czit7vUdggPHJi19b';
-
-interface Profile {
-  method: string;
-  url: string;
-  headers?: {
-    Authorization: String;
-  };
-  data?: Object;
-}
 
 const UseProfileProvider = ({ children }: { children: ReactNode }) => {
   const [login, setLogin] = useState(false);
@@ -30,7 +27,7 @@ const UseProfileProvider = ({ children }: { children: ReactNode }) => {
     setShowMenu(!showMenu);
   };
 
-  const getProyectos = async () => {
+  const getProyectos = async (): Promise<void> => {
     const res = await fetchData({
       method: 'GET',
       url: 'https://api.vercel.com/v9/projects',
@@ -39,9 +36,9 @@ const UseProfileProvider = ({ children }: { children: ReactNode }) => {
       },
       data: {},
     });
-    console.log(res);
+    console.log(res?.data);
     //typeScript
-    setProyectos(res?.data);
+    setProyectos(res?.data.projects);
   };
 
   useEffect(() => {

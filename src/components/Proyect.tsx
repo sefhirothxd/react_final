@@ -3,23 +3,16 @@ import { ProfileContext } from '../context/UseProfileProvider';
 
 const Proyect = () => {
   const { proyectos } = useContext(ProfileContext);
-  const { projects } = proyectos as any;
+  console.log(proyectos);
   return (
-    <div>
+    <div className="w-full">
       <h1 className="text-3xl my-8">My Proyects</h1>
       <div className="flex justify-center gap-10 items-center flex-wrap altoProyecto overflow-y-auto pb-5">
-        {projects?.map((project: any, index: string) => (
+        {proyectos?.map((project: any) => (
           <div
-            key={index}
+            key={project.name}
             className="w-96  rounded-lg border-2 text-gray-200 shadow-md bg-gray-800 border-gray-700"
           >
-            {/* <a href={'https://' + project.targets.production.alias[0]}>
-              <img
-                className="rounded-t-lg block object-cover"
-                src="https://picsum.photos/500/300"
-                alt=""
-              />
-            </a> */}
             <div className="p-5">
               <a
                 href={'https://' + project.targets.production.alias[0]}

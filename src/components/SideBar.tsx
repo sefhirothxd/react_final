@@ -8,7 +8,7 @@ import Linkedin from '../assets/link.svg';
 
 const SideBar = () => {
   return (
-    <div className=" border-r-2 w-full max-w-xs hidden lg:block border-white  bg-slate-700 z-10 max-h-screen py-11 relative">
+    <div className="border-r max-w-xs probando w-full hidden lg:block border-white  bg-slate-700 z-10 min-h-screen py-11 relative">
       <div className="flex items-center justify-center gap-4 mb-24">
         <h1 className="text-3xl font-medium">LarnU</h1>
         <p className="text-xl italic text-blueTitle">BootCamp</p>

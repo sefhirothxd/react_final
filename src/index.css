@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 .altoProyecto {
-  height: calc(100vh - 509px);
+  height: calc(100vh - 510px);
 }
 .leftSocial {
   left: 90px;
+}
+.probando {
+  min-width: 320px;
+}
+
+@media screen and (max-width: 1279px) {
+  .altoProyecto {
+    height: calc(100vh - 450px);
+  }
 }

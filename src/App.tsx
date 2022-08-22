@@ -6,12 +6,10 @@ import Login from './pages/Login';
 import NoFound from './pages/NoFound';
 
 function App() {
-
   return (
-    <div className="App bg-gray-800 text-gray-200 min-h-screen">
+    <div className="App bg-gray-800 text-gray-200 min-h-screen w-full">
       <Routes>
-        <Route path="/" element={<LayoutRequiereAuth />}>
-        </Route>
+        <Route path="/" element={<LayoutRequiereAuth />}></Route>
         <Route path="/" element={<LayoutContainerLogin />}>
           <Route path="/login" element={<Login />} />
           <Route index element={<Home />} />
@@ -19,7 +17,7 @@ function App() {
         <Route path="*" element={<NoFound />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
