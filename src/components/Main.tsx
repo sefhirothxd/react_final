@@ -7,7 +7,7 @@ const Main = () => {
     <div className="pt-5 px-5 w-full">
       <div className="mb-8 relative">
         <h1 className="text-3xl text-center mb-3">
-          Hi 👋, I&lsquo;m Bryan Omar Vera Cachay
+          Hi 👋, I&lsquo;m Bryan Vera
         </h1>
         <p className="text-xl text-center">Full Stack Develeper</p>
       </div>
