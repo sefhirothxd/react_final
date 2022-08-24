@@ -17,7 +17,7 @@ export const ProfileContext = createContext({
   },
 } as ProfileContextInterface);
 
-const token = 'o6xsHB5Czit7vUdggPHJi19b';
+const token = 'UGcvGjrSRgXS3QRirrF8oLKS';
 
 const UseProfileProvider = ({ children }: { children: ReactNode }) => {
   const [login, setLogin] = useState(false);
