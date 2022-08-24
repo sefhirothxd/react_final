@@ -8,7 +8,6 @@ jobs:
   lint:
     name: Check the source code
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - uses: actions/checkout@v2
       - name: Install packages
@@ -18,6 +17,7 @@ jobs:
       - name: Lint
         run: npm run lint
   deploy:
+    needs: [lint]
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
