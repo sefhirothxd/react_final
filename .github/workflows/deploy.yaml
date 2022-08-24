@@ -18,4 +18,4 @@ jobs:
           vercel-args: '--prod' #Optional
           vercel-org-id: lzx8lQi6ENGR0QPdONNUpSgK #Required
           vercel-project-id: prj_UB0lE8olH7lNCIndld72qasV5Pn4 #Required
-          working-directory: ./sub-directory
+          working-directory: dist
