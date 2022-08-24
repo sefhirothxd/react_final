@@ -6,7 +6,9 @@ const Main = () => {
   return (
     <div className="pt-5 px-5 w-full">
       <div className="mb-8 relative">
-        <h1 className="text-3xl text-center mb-3">Hi 👋, I'm Bryan Vera </h1>
+        <h1 className="text-3xl text-center mb-3">
+          Hi 👋, I&lsquo;m Bryan Vera
+        </h1>
         <p className="text-xl text-center">Full Stack Develeper</p>
       </div>
       <div className="py-5 px-5 bg-slate-600 md:max-w-7xl max-w-5xl mx-auto rounded-p48 flex items-center flex-col md:flex-row justify-evenly md:gap-11 gap-2">
