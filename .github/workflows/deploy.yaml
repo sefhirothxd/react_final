@@ -1,21 +1,20 @@
-name: deploy website
+name: Deploy CI
 on:
   push:
-    branches:
-      - main
+    branches: [master]
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - uses: actions/checkout@v2
-      #  your build commands
-      # - run: |
-      #    ng build --prod
-      - uses: amondnet/vercel-action@v20 #deploy
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to Vercel Action
+        uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
-          vercel-token: o6xsHB5Czit7vUdggPHJi19b # Required
-          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
-          vercel-args: '--prod' #Optional
-          vercel-org-id: lzx8lQi6ENGR0QPdONNUpSgK #Required
-          vercel-project-id: prj_UB0lE8olH7lNCIndld72qasV5Pn4 #Required
-          working-directory: dist
+          GITHUB_TOKEN: ${{ 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 }}
+          VERCEL_TOKEN: ${{ o6xsHB5Czit7vUdggPHJi19b }}
+          VERCEL_ORG_ID: ${{ lzx8lQi6ENGR0QPdONNUpSgK }}
+          VERCEL_PROJECT_ID: ${{ prj_UB0lE8olH7lNCIndld72qasV5Pn4 }}
