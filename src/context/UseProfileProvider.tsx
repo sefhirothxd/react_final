@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect, ReactNode } from 'react';
+import { useState, createContext, useEffect, ReactNode } from 'react';
 import { useAxios } from '../services/useAxios.jsx';
 
 interface ProfileContextInterface {
@@ -12,7 +12,9 @@ export const ProfileContext = createContext({
   login: false,
   showMenu: false,
   proyectos: [],
-  setBar: () => {},
+  setBar: () => {
+    // do nothing
+  },
 } as ProfileContextInterface);
 
 const token = 'o6xsHB5Czit7vUdggPHJi19b';

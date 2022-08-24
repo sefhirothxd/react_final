@@ -5,6 +5,17 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  lint:
+    name: Check the source code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Prettier
+        run: npm run prettier
+      - name: Lint
+        run: npm run lint
   deploy:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"

@@ -1,4 +1,3 @@
-import React from 'react';
 import Dashboard from '../assets/dashboard.svg';
 import Skill from '../assets/skill.svg';
 import Refe from '../assets/refe.svg';
@@ -38,13 +37,25 @@ const SideBar = () => {
         <div className="absolute bottom-10 leftSocial text-center">
           <h3 className="mb-5">Follow us:</h3>
           <div className="flex justify-between gap-10 items-center">
-            <a href="https://twitter.com/bveracachay" target={'_blank'}>
+            <a
+              href="https://twitter.com/bveracachay"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <img className="w-5" src={Twitter} alt="twitter icon" />
             </a>
-            <a href="https://github.com/sefhirothxd" target={'_blank'}>
+            <a
+              href="https://github.com/sefhirothxd"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <img src={GitHub} alt="github icon" />
             </a>
-            <a href="https://www.linkedin.com/in/bryanvera/" target={'_blank'}>
+            <a
+              href="https://www.linkedin.com/in/bryanvera/"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <img src={Linkedin} alt="linkedin icon" />
             </a>
           </div>
