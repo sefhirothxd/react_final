@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import Terminal from '../assets/terminals.svg';
 import Detail from '../assets/detail.svg';
 import Proyect from './Proyect';

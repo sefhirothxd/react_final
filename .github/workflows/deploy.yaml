@@ -1,5 +1,8 @@
 name: deploy website
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,9 +13,9 @@ jobs:
       #    ng build --prod
       - uses: amondnet/vercel-action@v20 #deploy
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          vercel-token: o6xsHB5Czit7vUdggPHJi19b # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
           vercel-args: '--prod' #Optional
-          vercel-org-id: ${{ secrets.ORG_ID}} #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
+          vercel-org-id: lzx8lQi6ENGR0QPdONNUpSgK #Required
+          vercel-project-id: prj_UB0lE8olH7lNCIndld72qasV5Pn4 #Required
           working-directory: ./sub-directory
