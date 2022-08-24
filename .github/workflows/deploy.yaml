@@ -27,6 +27,6 @@ jobs:
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERCEL_TOKEN: o6xsHB5Czit7vUdggPHJi19b
-          VERCEL_ORG_ID: lzx8lQi6ENGR0QPdONNUpSgK
-          VERCEL_PROJECT_ID: prj_UB0lE8olH7lNCIndld72qasV5Pn4
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
