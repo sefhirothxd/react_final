@@ -1,12 +1,14 @@
 import Dashboard from '../assets/dashboard.svg';
+import DashboardW from '../assets/dasbord-white.svg';
 import Skill from '../assets/skill.svg';
 import Refe from '../assets/refe.svg';
 import Twitter from '../assets/twitter.svg';
 import GitHub from '../assets/github.svg';
 import Linkedin from '../assets/link.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const SideBar = () => {
+  const params = useLocation();
   return (
     <div className="border-r max-w-xs probando w-full hidden lg:block border-white  bg-slate-700 z-10 min-h-screen py-11 relative">
       <div className="flex items-center justify-center gap-4 mb-24">
@@ -17,21 +19,24 @@ const SideBar = () => {
         <ul className="flex items-center justify-center  gap-11 flex-col">
           <li className="mx-auto w-40">
             <NavLink to={'/'} className="flex gap-4 ">
-              <img src={Dashboard} alt="icon dashboard" />
+              <img
+                src={params.pathname === '/' ? Dashboard : DashboardW}
+                alt="icon dashboard"
+              />
               <p className="text-xl ">Dashboard</p>
             </NavLink>
           </li>
           <li className="mx-auto w-40">
-            <NavLink to={'/login'} className="flex gap-4">
+            <NavLink to={'/skill'} className="flex gap-4">
               <img src={Skill} alt="icon dashboard" />
               <p className="text-xl ">My Skills</p>
             </NavLink>
           </li>
           <li className="mx-auto w-40">
-            <div className="flex gap-4">
+            <NavLink to={'/reference'} className="flex gap-4">
               <img src={Refe} alt="icon dashboard" />
               <p className="text-xl ">References</p>
-            </div>
+            </NavLink>
           </li>
         </ul>
         <div className="absolute bottom-10 leftSocial text-center">

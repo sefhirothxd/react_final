@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect, ReactNode } from 'react';
-import { useAxios } from '../services/useAxios.jsx';
+import { useAxios } from '../services/useAxios';
 
 interface ProfileContextInterface {
   login: boolean;

@@ -1,10 +1,9 @@
 import Terminal from '../assets/terminals.svg';
 import Detail from '../assets/detail.svg';
-import Proyect from './Proyect';
 
 const Main = () => {
   return (
-    <div className="pt-5 px-5 w-full">
+    <div className="w-full">
       <div className="mb-8 relative">
         <h1 className="text-3xl text-center mb-3">
           Hi 👋, I&lsquo;m Bryan Vera
@@ -21,8 +20,8 @@ const Main = () => {
           </div>
         </div>
         <div className="flex items-center flex-col gap-2 w-full ">
-          <h2 className="text-2xl text-center">About me</h2>
-          <p className="text-justify leading-5 w-4/5	">
+          <h2 className="text-2xl font-semibold text-center">About me</h2>
+          <p className="text-justify  w-4/5	">
             Desarrollador FullStack con capacidades de resolver problemas y en
             búsqueda de retos para contribuir con el desarrollo de la empresa y
             el crecimiento profesional. Me encuentro en constante capacitación
@@ -59,7 +58,6 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <Proyect />
     </div>
   );
 };

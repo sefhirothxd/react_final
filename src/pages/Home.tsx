@@ -1,9 +1,10 @@
-import React from 'react';
 import Main from '../components/Main';
+import Proyect from '../components/Proyect';
 const Home = () => {
   return (
-    <div className="flex">
+    <div className=" w-full pt-5 px-5">
       <Main />
+      <Proyect />
     </div>
   );
 };
