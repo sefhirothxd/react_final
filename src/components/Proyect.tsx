@@ -12,7 +12,7 @@ type Project = {
     };
   };
   link: {
-    repo: string;
+    repo?: string;
   };
   updatedAt: string;
 };
